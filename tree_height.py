@@ -27,9 +27,9 @@ def compute_height(n, parents):
     return max_heigth(tree)
 
 def main():
-    text = input("Enter data from the console or file I/F:")
+    text = input("Enter data from the console or file (I/F):")
     if "I" in text:
-        n = int(input("Enter the number of nodes: "))
+        p = int(input("Enter the number of nodes: "))
         parents = list(map(int, input("Enter the number of nodes: ").split()))
     elif "F" in text:
         fileName = input("Enter the file name:")
