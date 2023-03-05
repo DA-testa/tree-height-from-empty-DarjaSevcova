@@ -29,7 +29,7 @@ def compute_height(n, parents):
 def main():
     text = input("Enter data from the console or file (I/F):")
     if "I" in text:
-        p = int(input("Enter the number of nodes: "))
+        n = int(input("Enter the number of nodes: "))
         parents = list(map(int, input("Enter the number of nodes: ").split()))
     elif "F" in text:
         fileName = input("Enter the file name:")
@@ -42,7 +42,7 @@ def main():
         else:
             try:
                 with open (filePath) as file:
-                    p = int(file.readline())
+                    n = int(file.readline())
                     parents = list(map(int, file.readline().split()))
             except Exception as error:
                 print("Error:", str(error))
