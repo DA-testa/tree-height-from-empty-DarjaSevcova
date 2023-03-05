@@ -28,10 +28,10 @@ def compute_height(n, parents):
     return max_heigth(tree)
 
 def main():
-    text = input("Enter data from the console:")
+    text = input("Enter data from the console or file I/F:")
     if "I" in text:
-        n = int(input("Enter the number of nodes:"))
-        parents = list(map(int, input().split()))
+        n = int(input("Enter the number of nodes: "))
+        parents = list(map(int, input("Enter the number of nodes: ").split()))
     elif "F" in text:
         fileName = input("Enter the file name:")
         path = './test/'
@@ -43,8 +43,8 @@ def main():
         else:
             try:
                 with open (filePath) as file:
-                    p = int(file.readLine())
-                    parents = list(map(int, file.readLine().split()))
+                    p = int(file.readline())
+                    parents = list(map(int, file.readline().split()))
             except Exception as error:
                 print("Error:", str(error))
                 return
