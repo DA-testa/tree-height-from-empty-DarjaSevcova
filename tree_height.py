@@ -1,4 +1,4 @@
-# python3 Darja Sevcova 221RDC039 
+# python3 Darja Sevcova 221RDC039  
 
 import sys
 import threading
