@@ -22,7 +22,7 @@ def compute_height(n, parents):
             return heigth
         else:
             for ch in child[value]:
-                heigth = max(max, max_heigth(ch))
+                heigth = max(heigth, max_heigth(ch))
 
             return heigth + 1    
     return max_heigth(tree)
