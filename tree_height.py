@@ -6,32 +6,32 @@ import numpy
 
 
 def compute_height(n, parents):
-    child = [[] for _ in range(n)]
+    ch = [[] for _ in range(n)]
     tree = None
 
     for a, b in enumerate(parents):
         if b == -1:
             tree = a
         else:
-            child[b].append(a)
+            ch[b].append(a)
 
     def max_heigth(value):
         heigth = 1
 
-        if not child[value]:
+        if not ch[value]:
             return heigth
         else:
-            for ch in child[value]:
-                heigth = max(heigth, max_heigth(ch))
+            for child in ch[value]:
+                heigth = max(heigth, max_heigth(child))
 
             return heigth + 1    
     return max_heigth(tree)
 
 def main():
-    text = input("Enter data from the console pr file (I/F):")
+    text = input("Enter data from the console:")
     if "I" in text:
         n = int(input("Enter the number of nodes:"))
-        parents = list(map(int, file.readline().split()))
+        parents = list(map(int, input().split()))
     elif "F" in text:
         fileName = input("Enter the file name:")
         path = './test/'
