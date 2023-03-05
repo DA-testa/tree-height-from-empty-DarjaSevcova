@@ -4,7 +4,6 @@ import sys
 import threading
 import os
 
-
 def compute_height(n, parents):
     ch = [[] for _ in range(n)]
     tree = None
